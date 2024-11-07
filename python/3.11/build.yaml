@@ -5,9 +5,9 @@ build_from:
   armhf: "ghcr.io/home-assistant/armhf-base:"
   amd64: "ghcr.io/home-assistant/amd64-base:"
   i386: "ghcr.io/home-assistant/i386-base:"
-cosign:
-  base_identity: https://github.com/home-assistant/docker-base/.*
-  identity: https://github.com/home-assistant/docker-base/.*
+# cosign:
+#   base_identity: https://github.com/home-assistant/docker-base/.*
+#   identity: https://github.com/home-assistant/docker-base/.*
 args:
   PYTHON_VERSION: 3.11.9
   PIP_VERSION: 24.2

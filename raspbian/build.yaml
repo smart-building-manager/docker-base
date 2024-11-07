@@ -1,8 +1,8 @@
-image: ghcr.io/home-assistant/{arch}-base-raspbian
+image: ghcr.io/my-smart-homes/{arch}-base-raspbian
 build_from:
   armhf: "tianon/raspbian:"
-cosign:
-  identity: https://github.com/home-assistant/docker-base/.*
+# cosign:
+#   identity: https://github.com/home-assistant/docker-base/.*
 args:
   BASHIO_VERSION: 0.16.2
   TEMPIO_VERSION: 2021.09.0

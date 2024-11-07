@@ -1,10 +1,10 @@
-image: ghcr.io/home-assistant/{arch}-base-ubuntu
+image: ghcr.io/my-smart-homes/{arch}-base-ubuntu
 build_from:
   aarch64: "arm64v8/ubuntu:"
   armv7: "arm32v7/ubuntu:"
   amd64: "ubuntu:"
-cosign:
-  identity: https://github.com/home-assistant/docker-base/.*
+# cosign:
+#   identity: https://github.com/home-assistant/docker-base/.*
 args:
   BASHIO_VERSION: 0.16.2
   TEMPIO_VERSION: 2021.09.0
