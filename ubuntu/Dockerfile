@@ -64,10 +64,12 @@ RUN \
     && chmod a+x /usr/bin/tempio \
     \
     && mkdir -p /usr/src/bashio \
-    && curl -L -f -s "https://github.com/hassio-addons/bashio/archive/v${BASHIO_VERSION}.tar.gz" \
-        | tar -xzf - --strip 1 -C /usr/src/bashio \
+    && curl -L -f -s -o /tmp/bashio.tar.gz "https://github.com/hassio-addons/bashio/archive/v${BASHIO_VERSION}.tar.gz" \
+    && tar -xzf /tmp/bashio.tar.gz --strip 1 -C /usr/src/bashio \
+    && echo "Contents of /usr/src/bashio:" && ls -la /usr/src/bashio \
+    && test -d /usr/src/bashio/lib || (echo "Missing /usr/src/bashio/lib!" && exit 1) \
     && mv /usr/src/bashio/lib /usr/lib/bashio \
-    && ln -s /usr/lib/bashio/bashio /usr/bin/bashio \
+
     \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /usr/src/*
