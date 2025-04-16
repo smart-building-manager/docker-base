@@ -1,4 +1,4 @@
-image: ghcr.io/my-smart-homes/{arch}-base-raspbian
+image: ghcr.io/smart-building-manager/{arch}-base-raspbian
 build_from:
   armhf: "tianon/raspbian:"
 # cosign:
